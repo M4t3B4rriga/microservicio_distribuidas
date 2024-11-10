@@ -1,5 +1,5 @@
 # Usa una imagen de Node.js
-FROM node:14
+FROM node:18
 
 # Establece el directorio de trabajo
 WORKDIR /app
@@ -14,5 +14,5 @@ COPY . .
 # Exponer el puerto en el que correrá el servicio
 EXPOSE 3000
 
-# Comando para ejecutar el servicio
+# Incia el microservicio
 CMD ["node", "src/app.js"]
