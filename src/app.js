@@ -5,6 +5,24 @@ require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Crear la tabla productos si no existe
+pool
+  .query(
+    `
+  CREATE TABLE IF NOT EXISTS productos (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    precio DECIMAL NOT NULL
+  );
+`
+  )
+  .then(() => {
+    console.log("Tabla 'productos' verificada o creada.");
+  })
+  .catch((err) => {
+    console.error("Error al crear la tabla 'productos':", err.message);
+  });
+
 app.use(express.json());
 
 // Listar productos
