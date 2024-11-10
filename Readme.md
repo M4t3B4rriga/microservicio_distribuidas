@@ -47,7 +47,7 @@ En este proyecto, PostgreSQL se ejecuta como un servicio dentro de un contenedor
 
 La conexión a PostgreSQL se configura en el archivo config/db.js utilizando el módulo pg de Node.js. Este archivo toma las variables de entorno definidas en .env y crea una instancia de Pool para gestionar las conexiones a la base de datos.
 
-![Screenshot 2024-11-10 at 2.43.52 PM.png](./img/Screenshot_2024-11-10_at_2.43.52_PM.png/Screenshot_2024-11-10_at_2.43.52_PM.png)
+![Screenshot 2024-11-10 at 2.43.52 PM.png](./img/Screenshot_2024-11-10_at_2.43.52_PM.png)
 
 Esta instancia de Pool se reutiliza en todas las operaciones de la API, permitiendo una interacción eficiente con la base de datos.
 
